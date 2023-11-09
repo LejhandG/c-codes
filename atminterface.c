@@ -29,7 +29,7 @@ int main() {
         int withamt;
         printf("Enter the amount you want to withdraw\n");
         scanf("%d",&withamt);
-        if(withamt>0) {
+        if(withamt>0 && withamt<=inibal) {
             inibal = inibal-withamt;
         }
         else {
