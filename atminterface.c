@@ -9,7 +9,8 @@ int main() {
     gets(accno);
     printf("Enter account initial balance\n");
     scanf("%d",&inibal);
-    while(input!=4) {
+    if (inibal>=0) {
+while(input!=4) {
         printf("Choose one of the following options:\n1: Deposit Amount\n2: Withdraw Amount\n3: Mini Statemet\n4: Exit\n");
         scanf("%d",&input);
         switch (input)
@@ -43,6 +44,10 @@ int main() {
         break;
     }
     }
+}
+else {
+printf("Input Error! Transaction Cancelled");
+}
     getch();
     // clrscr();
     return 0;
